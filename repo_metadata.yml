@@ -1,0 +1,7 @@
+title: "Quickscan Dashboard"
+client: "Coding the Curbs"
+status: "active"
+years: [2]
+main_link: "https://quickscandashboard.agency.fdnd.nl/"
+dev_link: "https://quickscandashboard.dev.fdnd.nl/"
+tech_stack: ["SvelteKit", "Directus"]
