@@ -20,7 +20,9 @@
 
 <!-- progress-bar code -->
 <Progress waarde={count} max={10}/>
-
+<button onclick={() => count++}> +1 </button>
+<button onclick={() => count--}> -1 </button>
+<p>Button hierboven is om progress bar te testen. wordt later automatisch. dit is voor review</p>
 <section class="form">
     <form action="" method="get">
         <ul>
