@@ -4,6 +4,10 @@
 // voortgang = index
   let count = $state(0); 
 
+  function atScroll(event) {
+    const carousel = event.currentTarget;
+    count = Math.round(carousel.scrollLeft / carousel.clientWidth) + 1;
+  } 
 //   const options = {
 //   root: document.querySelector("#scrollArea"),
 //   rootMargin: "0px",
@@ -21,7 +25,7 @@
 <!-- progress-bar code -->
 <Progress waarde={count} max={10}/>
 
-<section class="form">
+<section class="form" onscroll={atScroll}>
     <form action="" method="get">
         <ul>
             <li id="">
