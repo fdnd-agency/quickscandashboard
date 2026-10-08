@@ -1,42 +1,54 @@
-# sv
+## Inhoudsopgave
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+- [Live link](#live-link)
+- [Installatie instructies](#installatie-instructies)
+- [Beschrijving van de site](#beschrijving-van-de-site)
+- [Mockups van de site](#mockups-van-de-site)
+- [Gebruik van de site](#gebruik-van-de-site)
+- [Bronnen](#bronnen)
+- [Designkeuzes](#designkeuzes)
+- [Kenmerken van de site (code)](#kenmerken-van-de-site-code)
+- [Link naar code conventies](#link-naar-code-conventies)
+- [Link naar CONTRIBUTING.MD](#link-naar-contributingmd)
 
-## Creating a project
+## Live link
+...
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installatie instructies
+zie de wiki
+https://github.com/fdnd-agency/quickscandashboard/wiki/installatie-app
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Beschrijving van de site
+onze app is een vermakkelijking van het process. 
+een formulier waarin je al je interviewvragen en bevindingen invult.
+ook hebben we het dashboard van de opdrachtgever nagebouwd.
 
-To recreate this project with the same configuration:
 
-```sh
-# recreate this project
-npx sv@0.17.1 create --template minimal --no-types --install npm ./
-```
+## Mockups van de site
+...
 
-## Developing
+## Gebruik van de site
+je begint met een formulier invullen.
+in dit formulier voeg je een image toe en vul je de benodigde vragen in.
+hierna kun je je resultaten simpel in het dashboard terugvinden.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Bronnen
+...
 
-```sh
-npm run dev
+## Designkeuzes
+het design van de form is gemaakt met UX in gedachten.
+(denk aan hoe duolingo werkt)
+we hebben de kleuren van de huidige coding-the-curbs site gebruikt voor de form.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+het design van het dashboard daarintegen is een kopie van het al bestaande dashboard.
 
-## Building
+## Kenmerken van de site (code)
+de form heeft een swipe-functie waarmee je makkelijk van vraag naar vraag kan swipen.
+ook zijn er knoppen aanwezig voor als de user dat fijner vindt.
 
-To create a production version of your app:
 
-```sh
-npm run build
-```
+## Link naar code conventies
+[link naar code conventies](https://github.com/fdnd-agency/quickscandashboard/wiki/Code%E2%80%90conventies)
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Link naar CONTRIBUTING.MD
+[link naar CONTRIBUTING.MD](https://github.com/fdnd-agency/quickscandashboard/blob/main/contributing.md)
