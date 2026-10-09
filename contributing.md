@@ -13,3 +13,16 @@
 - PR's gaan naar `dev`, niet direct naar `main`
 - Een groepsgenoot reviewt je PR, je merget nooit je eigen PR
 - Het moet werken zonder JavaScript en met alleen het toetsenbord
+
+# Definition of Ready
+- Het issue moet het format van een user story hebben;
+- Het issue moet geplanpokered zijn;
+- Het issue moet een specifieke takenlijst hebben;
+- Het issue moet acceptance criteria hebben;
+- Het issue moet designs bevatten, indien nodig.
+
+# Definition of Done
+- De acceptance criteria zijn allemaal vervuld;
+- Eventuele comments en/of feedback zijn verwerkt;
+- PRs worden minstens een keer geapproved voor de merge;
+- Het werk moet getest zijn doormiddel van Lighthouse, voor zowel performance als accessibility.
