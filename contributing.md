@@ -26,3 +26,37 @@
 - Eventuele comments en/of feedback zijn verwerkt;
 - PRs worden minstens een keer geapproved voor de merge;
 - Het werk moet getest zijn doormiddel van Lighthouse, voor zowel performance als accessibility.
+
+
+
+## Refinement
+### wat zijn de problemen
+- duidelijker issues schrijven. er is nu 1 nice issue de rest is troep
+- alle issues moeten eerst geschreven worden voordat je begint met werken
+- overleggen met team wat er in het issue moet.
+
+---
+## issues
+### hoe werkt een issue?
+- we maken een issue volgens DoR
+- kijken of er nog iets mist (issue review) dit is voor je begint met coderen!
+
+---
+
+### zodra je begint met coderen, EERST
+- je maakt voor ieder component een nieuwe branch
+- bekijken in de issue wat je daadwerkelijk moet maken zodat je niet onnodig werk doet
+
+---
+
+### als je klaar bent met je code voor de PR
+- zelf nagaan of alles klopt
+- een PR aanmaken en deze laten reviewen door groepsgenoot
+- beschrijf in de PR hoe de issue moet worden gereviewd
+
+---
+
+### PR reviewen
+- als jij degene bent die dit reviewt, kijk in de PR hoe dit moet worden gereviewd
+- als je klaar bent met reviewen zet een bericht over het gemaakte werk/code
+- eureka!
