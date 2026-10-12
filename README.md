@@ -15,6 +15,14 @@
 ...
 
 ## Installatie instructies
+Svelte install:
+npx sv create 
+cd (./ = huidige map)
+directory not empty? 'yes'
+template? 'minimal'
+what would you like to add? 'none'
+detect package? 'npm' of npm install
+
 zie de wiki
 https://github.com/fdnd-agency/quickscandashboard/wiki/installatie-app
 
