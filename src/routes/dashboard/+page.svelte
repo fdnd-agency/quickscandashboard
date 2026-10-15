@@ -1,4 +1,7 @@
 <script>
+
+
+// Geïmporteerde favicons
    	import sidebar from '$lib/assets/Sidebar.svg';
     import daydetail from '$lib/assets/daydetail.svg';
     import groups from '$lib/assets/groups.svg';
@@ -10,6 +13,9 @@
     import trends from '$lib/assets/trends.svg';
     import logoctc from '$lib/assets/logo-ctc.svg';
     import logominctc from '$lib/assets/logo-min-ctc.svg';
+
+    let { data } = $props();
+
 
 </script>
 
