@@ -144,4 +144,9 @@
         align-self: flex-start;
     }
 
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
 </style>
