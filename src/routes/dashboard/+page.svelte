@@ -2,17 +2,17 @@
 
 
 // Geïmporteerde favicons
-   	import sidebar from '$lib/assets/Sidebar.svg';
-    import daydetail from '$lib/assets/daydetail.svg';
-    import groups from '$lib/assets/groups.svg';
-    import locations from '$lib/assets/locations.svg';
-    import overview from '$lib/assets/overview.svg';
-    import scans from '$lib/assets/scans.svg';
-    import selector from '$lib/assets/selector.svg';
-    import support from '$lib/assets/support.svg';
-    import trends from '$lib/assets/trends.svg';
-    import logoctc from '$lib/assets/logo-ctc.svg';
-    import logominctc from '$lib/assets/logo-min-ctc.svg';
+    import sidebar from '#lib/assets/Sidebar.svg';
+    import daydetail from '#lib/assets/daydetail.svg';
+    import groups from '#lib/assets/groups.svg';
+    import locations from '#lib/assets/locations.svg';
+    import overview from '#lib/assets/overview.svg';
+    import scans from '#lib/assets/scans.svg';
+    import selector from '#lib/assets/selector.svg';
+    import support from '#lib/assets/support.svg';
+    import trends from '#lib/assets/trends.svg';
+    import logoctc from '#lib/assets/logo-ctc.svg';
+    import logominctc from '#lib/assets/logo-min-ctc.svg';
 
     let { data } = $props();
 
