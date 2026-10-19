@@ -60,3 +60,13 @@
 - als jij degene bent die dit reviewt, kijk in de PR hoe dit moet worden gereviewd
 - als je klaar bent met reviewen zet een bericht over het gemaakte werk/code
 - eureka!
+
+---
+
+### Conventie Atomic design
+- Componenten volgen de richtlijnen van het Atomic design
+- Atoms: buttons, forms & headings
+- Molecules: atomen samengevoegd, bijvoorbeeld een chart
+- Organisms: verschillende mlecules samen, bijvoorbeeld de sidebar
+- Templates: bijvoorbeeld header + footer
+- pages: volledige pagina, bijvoorbeeld 4 grafieken en de sidebar
