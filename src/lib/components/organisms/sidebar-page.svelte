@@ -1,5 +1,5 @@
 <script>
-
+    import { page } from '$app/state';
 
 
 // Geïmporteerde favicons
@@ -27,7 +27,7 @@
 
         <div class="logodiv">
             <a href="/dashboard">
-                <img src={logoctc} alt="coding the curbs" class="logo" height="32" width="93.45">
+                <img src={logoctc} alt="coding the curbs" class="logo" height="32" width="93.45" fetchpriority="high">
                 <img src={logominctc} alt="" class="logo-min" height="40" width="40">
             </a>
         </div>
@@ -35,9 +35,10 @@
         <div class="data-insights">
             <h2>Data & Insights</h2>
             <ul class="data-insights-list">
-                <li><a href="/dashboard/overview"><img src={overview} alt=""><span>Overview</span></a></li>
-                <li><a href="/dashboard/trends"><img src={trends} alt=""><span>Trends</span></a></li>
-                <li><a href="/dashboard/daydetail"><img src={daydetail} alt=""><span>Day detail</span></a></li>
+                <!-- aria-current markeert de actieve pagina voor screenreaders én voor de highlight in CSS -->
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/overview' ? 'page' : undefined}><img src={overview} alt=""><span>Overview</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/trends' ? 'page' : undefined}><img src={trends} alt=""><span>Trends</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/daydetail' ? 'page' : undefined}><img src={daydetail} alt=""><span>Day detail</span></a></li>
             </ul>
         </div>
 
@@ -46,9 +47,9 @@
         <div class="manage">
             <h2>Manage</h2>
             <ul class="manage-list">
-                <li><a href="/dashboard/locations"><img src={locations} alt=""><span>Locations</span></a></li>
-                <li><a href="/dashboard/groups"><img src={groups} alt=""><span>Groups</span></a></li>
-                <li><a href="/dashboard/selections"><img src={selector} alt=""><span>Selections</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/locations' ? 'page' : undefined}><img src={locations} alt=""><span>Locations</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/groups' ? 'page' : undefined}><img src={groups} alt=""><span>Groups</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/selections' ? 'page' : undefined}><img src={selector} alt=""><span>Selections</span></a></li>
             </ul>
         </div>
 
@@ -57,7 +58,7 @@
         <div class="quickscan">
             <h2>Quickscan</h2>
             <ul class="quickscan-list">
-                <li><a href="/dashboard/quickscan"><img src={scans} alt=""><span>Quickscan</span></a></li>
+                <li><a href="/quickscan" aria-current={page.url.pathname === '/dashboard/quickscan' ? 'page' : undefined}><img src={scans} alt=""><span>Quickscan</span></a></li>
             </ul>
         </div>
 
@@ -70,7 +71,7 @@
     </nav>
 
     <input id="menu" type="checkbox">
-    <label for="menu"><img class="menu-svg" src="{sidebar}" alt="">Menu</label>
+    <label for="menu"><img class="menu-svg" src="{sidebar}" alt="Menu in- of uitklappen"></label>
 
 </div>
 
@@ -150,13 +151,27 @@
         margin: 0;    
     }
 
- 
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
     li a {
         display: flex;
         align-items: center;
         gap: .3rem;
         font-weight: 400;
         padding: .3rem .5rem;
+    }
+
+    li a[aria-current="page"]{
+        background-color: var(--active-state);
+        border-radius: 8px;
+    }
+
+    a:hover {
+        background-color: var(--active-state);
+        border-radius: 6px;
     }
 
     li img {
@@ -169,9 +184,6 @@
         margin-top: auto;
     }
 
-    .menu-svg {
-        padding: 1rem;
-    }
 
     input {
         position: absolute; 
@@ -183,9 +195,20 @@
         align-self: flex-start;
     }
 
-    a {
-        text-decoration: none;
-        color: var(--text-color);
+    label {
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        margin: .5rem;
+        padding: .5rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color .15s;
     }
+
+    label:hover {
+        background-color: var(--hover-color);
+    }
+
 
 </style>

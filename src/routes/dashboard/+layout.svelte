@@ -8,7 +8,10 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Coding The Curbs Dashboard</title>
 </svelte:head>
 
 <Sidebar />
-{@render children()}
+<main>
+	{@render children()}
+</main>
