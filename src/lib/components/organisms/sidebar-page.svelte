@@ -27,7 +27,7 @@
 
         <div class="logodiv">
             <a href="/dashboard">
-                <img src={logoctc} alt="coding the curbs" class="logo" height="32" width="93.45">
+                <img src={logoctc} alt="coding the curbs" class="logo" height="32" width="93.45" fetchpriority="high">
                 <img src={logominctc} alt="" class="logo-min" height="40" width="40">
             </a>
         </div>
