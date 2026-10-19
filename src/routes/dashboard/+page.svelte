@@ -1,4 +1,5 @@
 <script>
+    import { page } from '$app/state';
 
 
 // Geïmporteerde favicons
@@ -34,9 +35,10 @@
         <div class="data-insights">
             <h2>Data & Insights</h2>
             <ul class="data-insights-list">
-                <li><a href="/"><img src={overview} alt=""><span>Overview</span></a></li>
-                <li><a href="/"><img src={trends} alt=""><span>Trends</span></a></li>
-                <li><a href="/"><img src={daydetail} alt=""><span>Day detail</span></a></li>
+                <!-- aria-current markeert de actieve pagina voor screenreaders én voor de highlight in CSS -->
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={overview} alt=""><span>Overview</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={trends} alt=""><span>Trends</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={daydetail} alt=""><span>Day detail</span></a></li>
             </ul>
         </div>
 
@@ -45,9 +47,9 @@
         <div class="manage">
             <h2>Manage</h2>
             <ul class="manage-list">
-                <li><a href="/"><img src={locations} alt=""><span>Locations</span></a></li>
-                <li><a href="/"><img src={groups} alt=""><span>Groups</span></a></li>
-                <li><a href="/"><img src={selector} alt=""><span>Selections</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={locations} alt=""><span>Locations</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={groups} alt=""><span>Groups</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={selector} alt=""><span>Selections</span></a></li>
             </ul>
         </div>
 
@@ -56,7 +58,7 @@
         <div class="quickscan">
             <h2>Quickscan</h2>
             <ul class="quickscan-list">
-                <li><a href="/quickscan"><img src={scans} alt=""><span>Quickscan</span></a></li>
+                <li><a href="/quickscan" aria-current={page.url.pathname === '/dashboard' ? 'page' : undefined}><img src={scans} alt=""><span>Quickscan</span></a></li>
             </ul>
         </div>
 
@@ -156,6 +158,11 @@
         gap: .3rem;
         font-weight: 400;
         padding: .3rem .5rem;
+    }
+
+    li a[aria-current="page"]{
+        background-color: var(--active-state);
+        border-radius: 8px;
     }
 
     li img {
