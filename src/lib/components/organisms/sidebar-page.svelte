@@ -169,6 +169,11 @@
         border-radius: 8px;
     }
 
+    a:hover {
+        background-color: var(--active-state);
+        border-radius: 6px;
+    }
+
     li img {
         width: 15px;
         height: 15px;
@@ -191,14 +196,14 @@
     }
 
     label {
-	display: flex;
-	align-items: center;
-	align-self: flex-start;
-	margin: .5rem;
-	padding: .5rem;
-	border-radius: 6px;
-	cursor: pointer;
-	transition: background-color .15s;
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        margin: .5rem;
+        padding: .5rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color .15s;
     }
 
     label:hover {
