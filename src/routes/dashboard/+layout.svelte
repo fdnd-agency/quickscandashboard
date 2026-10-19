@@ -1,6 +1,7 @@
 <script>
+	import Sidebar from '#lib/components/organisms/sidebar-page.svelte'
 	import favicon from '#lib/assets/favicon.svg';
-	import '../stylesheet.css';
+	import '../../stylesheet.css';
 
 	let { children } = $props();
 </script>
@@ -9,4 +10,5 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<Sidebar />
 {@render children()}

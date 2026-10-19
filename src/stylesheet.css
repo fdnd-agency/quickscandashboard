@@ -1,6 +1,8 @@
 body {
         background-color: var(--background);
+    font-family: "Inter", system-ui, sans-serif;
 }
+
 
     :root {
     --background: hsl(247, 82%, 98%);
@@ -17,8 +19,8 @@ body {
 
 @media(prefers-color-scheme: dark) {
     :root {
-    --background: hsl(256, 44%, 5%);
-    --component-background: hsl(255, 29%, 14%);
+    --background: hsl(258, 36%, 5%);
+    --component-background: hsl(254, 29%, 9%);
     --text-color: hsl(253, 46%, 92%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
