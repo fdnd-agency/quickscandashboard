@@ -71,7 +71,7 @@
     </nav>
 
     <input id="menu" type="checkbox">
-    <label for="menu"><img class="menu-svg" src="{sidebar}" alt=""></label>
+    <label for="menu"><img class="menu-svg" src="{sidebar}" alt="Menu in- of uitklappen"></label>
 
 </div>
 
