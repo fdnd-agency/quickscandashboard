@@ -8,6 +8,7 @@ body {
     --text-color: hsl(256, 33%, 15%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
+    --active-state: hsl(251, 49%, 93%);
     --chart-1: hsl(257, 89%, 74%);
     --chart-2: hsl(195, 100%, 45%);
     --chart-3: hsl(167, 52%, 51%);
@@ -22,6 +23,7 @@ body {
     --text-color: hsl(253, 46%, 92%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
+    --active-state: hsl(253, 21%, 17%);
     --chart-1: hsl(257, 89%, 74%);
     --chart-2: hsl(195, 100%, 45%);
     --chart-3: hsl(167, 52%, 51%);
