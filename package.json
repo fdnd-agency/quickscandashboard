@@ -19,5 +19,8 @@
 	"imports": {
 		"#lib": "./src/lib",
 		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"chart.js": "^4.5.1"
 	}
 }
