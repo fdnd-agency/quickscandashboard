@@ -1,6 +1,8 @@
 body {
         background-color: var(--background);
+    font-family: "Inter", system-ui, sans-serif;
 }
+
 
     :root {
     --background: hsl(247, 82%, 98%);
@@ -8,6 +10,8 @@ body {
     --text-color: hsl(256, 33%, 15%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
+    --hover-color: hsl(253, 33%, 95%);
+    --active-state: hsl(251, 49%, 93%);
     --chart-1: hsl(257, 89%, 74%);
     --chart-2: hsl(195, 100%, 45%);
     --chart-3: hsl(167, 52%, 51%);
@@ -17,11 +21,13 @@ body {
 
 @media(prefers-color-scheme: dark) {
     :root {
-    --background: hsl(256, 44%, 5%);
-    --component-background: hsl(255, 29%, 14%);
+    --background: hsl(258, 36%, 5%);
+    --component-background: hsl(254, 29%, 9%);
     --text-color: hsl(253, 46%, 92%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
+    --hover-color: hsl(258, 23%, 11%);
+    --active-state: hsl(253, 21%, 17%);
     --chart-1: hsl(257, 89%, 74%);
     --chart-2: hsl(195, 100%, 45%);
     --chart-3: hsl(167, 52%, 51%);
