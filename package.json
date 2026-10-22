@@ -19,5 +19,8 @@
 	"imports": {
 		"#lib": "./src/lib",
 		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"papaparse": "^5.7.0"
 	}
 }
