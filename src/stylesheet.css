@@ -1,8 +1,3 @@
-body {
-        background-color: var(--background);
-    font-family: "Inter", system-ui, sans-serif;
-}
-
 
     :root {
     --background: hsl(247, 82%, 98%);
@@ -34,4 +29,21 @@ body {
     --chart-4: hsl(25, 86%, 66%);
     --chart-5: hsl(318, 79%, 70%);
 }
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('/src/lib/assets/Poppins/Poppins-Regular.ttf');
+}
+
+:global(*) {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+:global(body) {
+  margin: 0;
+  background: var(--background);
+  margin: 0 0 0 15em;
 }
