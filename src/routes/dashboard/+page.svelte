@@ -30,30 +30,6 @@
 </ul>
 
 <style>
-  :root {
-    --background: hsl(247, 82%, 98%);
-    --component-background: hsl(253, 46%, 92%);
-    --component-outline: hsl(240, 20%, 83%);
-    --text-color: hsl(256, 33%, 15%);
-  }
-
-  @font-face {
-    font-family: 'Poppins-Regular';
-    src: url('/src/lib/assets/Poppins/Poppins-Regular.ttf');
-  }
-
-  :global(*) {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins-Regular', sans-serif;
-  }
-
-  :global(body) {
-    margin: 0;
-    background: var(--background);
-    margin: 0 0 0 15em;
-  }
-  
 
 
   ul.grid {
@@ -66,4 +42,3 @@
       width: 300px;
     }
   }
-</style>
