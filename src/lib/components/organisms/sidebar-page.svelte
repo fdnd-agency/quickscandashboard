@@ -70,7 +70,7 @@
         </div>
     </nav>
 
-    <input id="menu" type="checkbox">
+    <input id="menu" class="visually-hidden" type="checkbox">
     <label for="menu"><img class="menu-svg" src="{sidebar}" alt="Menu in- of uitklappen"></label>
 
 </div>
@@ -90,16 +90,10 @@
         .menu-content { width: 3rem }
         .logo { display: none}
         .logo-min { display: block}
-        span {  position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0; }
+        span{overflow: hidden;}
         h2 {display: none;}
     }
 
-
-    input:focus-visible + label{
-        outline: 2px solid white;
-        border-radius: 3px;
-
-    }
 
     .menu-content {
         background-color: var(--component-background);
@@ -134,7 +128,7 @@
         font-size: 13px;
         font-weight: 500;
         padding: 0 8px;
-        margin: 0 0 .5;
+        margin: 0 0 .5rem;
         opacity: .6;
     }
 
@@ -153,7 +147,6 @@
 
     a {
         text-decoration: none;
-        color: var(--text-color);
     }
 
     li a {
@@ -166,12 +159,12 @@
 
     li a[aria-current="page"]{
         background-color: var(--active-state);
-        border-radius: 8px;
+        border-radius: var(--border-radius);
     }
 
     a:hover {
         background-color: var(--active-state);
-        border-radius: 6px;
+        border-radius: var(--border-radius);
     }
 
     li img {
@@ -186,12 +179,6 @@
 
 
     input {
-        position: absolute; 
-        overflow: hidden; 
-        clip: rect(0 0 0 0); 
-        height: 1px; width: 1px; 
-        margin: -1px; padding: 0; border: 0; 
-        /* al bovenstaande code is om een checkbox visueel te verbergen maar wel zichtbaar te houden voor screenreaders */
         align-self: flex-start;
     }
 
@@ -201,7 +188,7 @@
         align-self: flex-start;
         margin: .5rem;
         padding: .5rem;
-        border-radius: 6px;
+        border-radius: var(--border-radius);
         cursor: pointer;
         transition: background-color .15s;
     }
