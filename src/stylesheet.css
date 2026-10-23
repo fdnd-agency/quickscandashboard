@@ -1,5 +1,8 @@
 
     :root {
+
+    --border-radius: 8px;
+
     --background: hsl(247, 82%, 98%);
     --component-background: hsl(253, 46%, 92%);
     --text-color: hsl(256, 33%, 15%);
@@ -31,19 +34,41 @@
 }
 }
 
-@font-face {
-  font-family: 'Poppins-Regular';
-  src: url('/src/lib/assets/Poppins/Poppins-Regular.ttf');
-}
 
-:global(*) {
+* {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-:global(body) {
+body {
   margin: 0;
   background: var(--background);
-  margin: 0 0 0 15em;
+}
+
+/* Global hoeft niet omdat dit al globaal is in dit bestand */
+
+
+input:focus-visible + label{
+    outline: 2px solid white;
+    border-radius: 3px;
+
+}
+
+a {
+    color: var(--text-color);
+}
+
+.visually-hidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+/* al bovenstaande code is om een checkbox visueel te verbergen maar wel zichtbaar te houden voor screenreaders */
+}
+
+h1 {
+    color: var(--text-color);
+    margin: 0;
 }
