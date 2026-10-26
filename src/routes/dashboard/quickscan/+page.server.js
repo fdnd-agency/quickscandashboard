@@ -21,29 +21,6 @@ export async function load({ fetch }) {
         header: true,
     })
 
-//  tel hoe vaak elk voertuigtype voorbij komt
-//  const [type] betekent: heb je dit type nog niet gezien? begin dan bij 0
-//  key en value kijken op welke plaats welk voertuig staat.
-
-  const counts = {};
-    for (const row of parsed.data) {
-        const type = row.Voertuigtype;
-        counts[type] = (counts[type] ?? 0) + 1;
-    }
-
-        return {
-        voertuigLabels: Object.keys(counts),
-        voertuigAantallen: Object.values(counts)
-    }
+    return { parsed };
 }
 
-// Voorbeeld van wat je berekent
-// rij 1: Voertuigtype = 'Bestelbus'
-// counts['Bestelbus'] = (counts['Bestelbus'] ?? 0) + 1;
-// → { Bestelbus: 1 }
-
-// rij 2: Voertuigtype = 'Bakwagen'
-// → { Bestelbus: 1, Bakwagen: 1 }
-
-// rij 3: Voertuigtype = 'Bestelbus'
-// → { Bestelbus: 2, Bakwagen: 1 }

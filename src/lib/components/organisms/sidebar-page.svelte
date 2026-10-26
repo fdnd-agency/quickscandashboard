@@ -36,9 +36,9 @@
             <h2>Data & Insights</h2>
             <ul class="data-insights-list">
                 <!-- aria-current markeert de actieve pagina voor screenreaders én voor de highlight in CSS -->
-                <li><a href="/dashboard/overview" aria-current={page.url.pathname === '/dashboard/overview' ? 'page' : undefined}><img src={overview} alt=""><span>Overview</span></a></li>
-                <li><a href="/dashboard/trends" aria-current={page.url.pathname === '/dashboard/trends' ? 'page' : undefined}><img src={trends} alt=""><span>Trends</span></a></li>
-                <li><a href="/dashboard/daydetail" aria-current={page.url.pathname === '/dashboard/daydetail' ? 'page' : undefined}><img src={daydetail} alt=""><span>Day detail</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/overview' ? 'page' : undefined}><img src={overview} alt=""><span>Overview</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/trends' ? 'page' : undefined}><img src={trends} alt=""><span>Trends</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/daydetail' ? 'page' : undefined}><img src={daydetail} alt=""><span>Day detail</span></a></li>
             </ul>
         </div>
 
@@ -47,9 +47,9 @@
         <div class="manage">
             <h2>Manage</h2>
             <ul class="manage-list">
-                <li><a href="/dashboard/locations" aria-current={page.url.pathname === '/dashboard/locations' ? 'page' : undefined}><img src={locations} alt=""><span>Locations</span></a></li>
-                <li><a href="/dashboard/groups" aria-current={page.url.pathname === '/dashboard/groups' ? 'page' : undefined}><img src={groups} alt=""><span>Groups</span></a></li>
-                <li><a href="/dashboard/selections" aria-current={page.url.pathname === '/dashboard/selections' ? 'page' : undefined}><img src={selector} alt=""><span>Selections</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/locations' ? 'page' : undefined}><img src={locations} alt=""><span>Locations</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/groups' ? 'page' : undefined}><img src={groups} alt=""><span>Groups</span></a></li>
+                <li><a href="/" aria-current={page.url.pathname === '/dashboard/selections' ? 'page' : undefined}><img src={selector} alt=""><span>Selections</span></a></li>
             </ul>
         </div>
 
@@ -58,14 +58,14 @@
         <div class="quickscan">
             <h2>Quickscan</h2>
             <ul class="quickscan-list">
-                <li><a href="/dashboard/quickscan" aria-current={page.url.pathname === '/dashboard/quickscan' ? 'page' : undefined}><img src={scans} alt=""><span>Quickscan</span></a></li>
+                <li><a href="/quickscan" aria-current={page.url.pathname === '/dashboard/quickscan' ? 'page' : undefined}><img src={scans} alt=""><span>Quickscan</span></a></li>
             </ul>
         </div>
 
         <div class="profile">
             <ul class="profile-list">
-                <li><a href="/dashboard/support"><img src={support} alt=""><span>Support</span></a></li>
-                <li><a href="/dashboard/profiel"><span>Profiel</span></a></li>
+                <li><a href="/"><img src={support} alt=""><span>Support</span></a></li>
+                <li><a href="/"><span>Profiel</span></a></li>
             </ul>
         </div>
     </nav>
