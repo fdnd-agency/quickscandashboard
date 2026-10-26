@@ -1,10 +1,15 @@
 <script>
 	import Sidebar from '#lib/components/organisms/sidebar-page.svelte'
 	import favicon from '#lib/assets/favicon.svg';
+	import LineChart from '#lib/components/molecules/LineChart.svelte'
+	import BarChart from '#lib/components/molecules/BarChart.svelte'
 	import '../../stylesheet.css';
 
 	let { children } = $props();
 </script>
+
+
+
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
