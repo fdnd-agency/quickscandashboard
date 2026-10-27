@@ -26,13 +26,8 @@
         datasets: [{
           label: dataLabel,
           data: $state.snapshot(chartData),
-          backgroundColor: [
-            'hsl(257, 89%, 74%)',
-            'hsl(195, 100%, 45%)',
-            'hsl(167, 52%, 51%)',
-            'hsl(25, 86%, 66%)',
-            'hsl(318, 79%, 70%)'
-          ]
+          // kleur van de line
+          backgroundColor: ['hsl(257, 89%, 74%)']
         }]
       }
     })

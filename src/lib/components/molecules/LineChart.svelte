@@ -22,13 +22,12 @@
           label: dataLabel,
           data: $state.snapshot(chartData),
           tension: 0.4,
-          backgroundColor: [
-            'hsl(257, 89%, 74%)',
-            'hsl(195, 100%, 45%)',
-            'hsl(167, 52%, 51%)',
-            'hsl(25, 86%, 66%)',
-            'hsl(318, 79%, 70%)'
-          ]
+          pointStyle: false,
+
+          // kleur van het vierkant op de hover
+          backgroundColor: ['hsl(257, 89%, 74%)'],
+          // kleur van de line
+          borderColor: ['hsl(257, 89%, 74%)']
         }]
       }
     })
