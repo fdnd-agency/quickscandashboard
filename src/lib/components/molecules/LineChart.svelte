@@ -11,6 +11,11 @@
 
   let canvas = $state()
 
+  // kleur van de text
+  Chart.defaults.color = '#E5E1F4'
+  // kleur van de grafiek gridlines
+  Chart.defaults.borderColor = 'hsl(257, 36%, 27%)'
+
   $effect(() => {
     if (!canvas) return
 
@@ -31,8 +36,6 @@
         }]
       }
     })
-    Chart.defaults.color = '#E5E1F4';
-    Chart.defaults.borderColor = '#E5E1F4';
 
     return () => chart.destroy()
   })
