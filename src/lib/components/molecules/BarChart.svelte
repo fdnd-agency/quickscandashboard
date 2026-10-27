@@ -21,11 +21,6 @@
 
     const chart = new Chart(canvas, {
       type: 'bar',
-      options: {
-        plugins: {
-          legend: { display: true, position: 'right' }
-        }
-      },
       data: {
         labels: $state.snapshot(chartLabels),
         datasets: [{
@@ -34,6 +29,11 @@
           // kleur van de line
           backgroundColor: ['hsl(257, 89%, 74%)']
         }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        }
       }
     })
 

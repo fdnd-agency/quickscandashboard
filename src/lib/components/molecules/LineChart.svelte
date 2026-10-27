@@ -34,6 +34,11 @@
           // kleur van de line
           borderColor: ['hsl(257, 89%, 74%)']
         }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        }
       }
     })
 
