@@ -6,7 +6,8 @@
 </script>
 
 
-<BarChart
+<ChartTemplate
+  chartType='line'
   title="voertuigtypes"
   chartLabels={data.voertuigLabels}
   chartData={data.voertuigAantallen}
