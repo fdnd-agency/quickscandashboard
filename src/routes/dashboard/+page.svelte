@@ -1,6 +1,5 @@
 <script>
-    import LineChart from '#lib/components/molecules/LineChart.svelte'
-    import BarChart from '#lib/components/molecules/BarChart.svelte'
+  	import ChartTemplate from '#lib/components/molecules/ChartTemplate.svelte';
 
     // --- Chart 1 ---
     const drinks = ['Fanta', 'Cola', 'Apple juice', 'Orange juice', 'Chocolate milk']
@@ -22,10 +21,10 @@
 
 <ul class="grid">
   <li class="graphs">
-    <LineChart title="Line Chart" chartLabels={drinks} chartData={staticData1} dataLabel="Data 1" onReload={loadChart1} />
+    <ChartTemplate chartType="line" title="Line Chart" chartLabels={drinks} chartData={staticData1} dataLabel="Data 1" />
   </li>
     <li class="graphs">
-    <BarChart title="Bar Chart" chartLabels={colors} chartData={staticData2} dataLabel="Data 2" onReload={loadChart2} />
+    <ChartTemplate chartType="bar" title="Bar Chart" chartLabels={colors} chartData={staticData2} dataLabel="Data 2"/>
   </li>
 </ul>
 
@@ -42,4 +41,6 @@
       width: 300px;
     }
   }
+
+
   </style>

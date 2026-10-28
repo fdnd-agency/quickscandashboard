@@ -1,26 +1,32 @@
 <script>
   import Chart from 'chart.js/auto'
-  import '../../../stylesheet.css'
 
   let {
     title,
     chartLabels,
     chartData,
     dataLabel,
-    onReload,
     chartType,
   } = $props()
 
   let canvas = $state()
 
 
-  // kleur van de text
-  Chart.defaults.color = '#E5E1F4'
-  // kleur van de grafiek gridlines
-  Chart.defaults.borderColor = 'hsl(257, 36%, 27%)'
+ // maak een cssVar functie
+  const cssVar = (name) =>
+    getComputedStyle(document.documentElement).getPropertyValue(name).trim()
 
   $effect(() => {
     if (!canvas) return
+
+    // maak van css-variablele een JS-variabele
+    const textColor = cssVar('--text-color')
+    const gridColor = cssVar('--component-outline')
+
+    // kleur van de text
+    Chart.defaults.color = textColor
+    // kleur van de grafiek gridlines
+    Chart.defaults.borderColor = gridColor
 
     const chart = new Chart(canvas, {
       type: chartType,
@@ -29,8 +35,14 @@
         datasets: [{
           label: dataLabel,
           data: $state.snapshot(chartData),
-          // kleur van de line
-          backgroundColor: ['hsl(257, 89%, 74%)']
+
+          // kleur van het vierkant op de hover
+          backgroundColor: ['hsl(257, 89%, 74%)'],
+          // kleur/styling van de line
+          borderColor: ['hsl(257, 89%, 74%)'],
+          tension: 0.4,
+          pointStyle: false,
+
         }]
       },
       options: {
@@ -55,6 +67,24 @@
 </ul>
 
 <style>
+
+  /* chart styling */
+
+ul.wrapper {
+    padding: 1em;
+    background: var(--component-background);
+    color: var(--text-color);
+    border: solid var(--component-outline) 2px;
+    border-radius: 1em;
+    list-style: none;
+
+      li {
+        p {
+          margin: 0;
+          padding-bottom: 0.5em;
+        }
+      }
+}
 
 
 

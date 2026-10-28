@@ -1,9 +1,7 @@
 <script>
 	import Sidebar from '#lib/components/organisms/sidebar-page.svelte';
 	import favicon from '#lib/assets/favicon.svg';
-	import LineChart from '#lib/components/molecules/LineChart.svelte'
-	import BarChart from '#lib/components/molecules/BarChart.svelte'
-	import '../../stylesheet.css';
+	import '#lib/styles/stylesheet.css';
 
 	let { children } = $props();
 </script>

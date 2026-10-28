@@ -1,5 +1,5 @@
 <script>
-  import Progress from '#lib/components/Progress.svelte';
+  import Progress from './Progress.svelte';
     import { linear } from 'svelte/easing';
 // $state maakt deze variabele reactief, verandert hij, dan bouwt Svelte de pagina opnieuw
 // voortgang = index

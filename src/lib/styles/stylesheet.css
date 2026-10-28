@@ -5,6 +5,7 @@
 
     --background: hsl(247, 82%, 98%);
     --component-background: hsl(253, 46%, 92%);
+    --component-outline: hsl(240, 20%, 83%);
     --text-color: hsl(256, 33%, 15%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
@@ -21,6 +22,7 @@
     :root {
     --background: hsl(258, 36%, 5%);
     --component-background: hsl(254, 29%, 9%);
+    --component-outline: hsl(257, 36%, 27%);
     --text-color: hsl(253, 46%, 92%);
     --highlight-color: hsl(253, 90%, 63%);
     --accent-color: hsl(257, 86%, 74%);
@@ -72,3 +74,6 @@ h1 {
     color: var(--text-color);
     margin: 0;
 }
+
+
+
