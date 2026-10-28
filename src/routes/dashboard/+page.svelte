@@ -1,6 +1,5 @@
 <script>
-    import LineChart from '#lib/components/molecules/LineChart.svelte'
-    import BarChart from '#lib/components/molecules/BarChart.svelte'
+  	import ChartTemplate from '#lib/components/molecules/ChartTemplate.svelte';
 
     // --- Chart 1 ---
     const drinks = ['Fanta', 'Cola', 'Apple juice', 'Orange juice', 'Chocolate milk']
