@@ -55,3 +55,23 @@
   <!-- chart canvas -->
    <canvas bind:this={canvas}></canvas>
 </ul>
+
+<style>
+    /* chart styling */
+
+    ul.wrapper {
+        padding: 1em;
+        background: var(--component-background);
+        color: var(--text-color);
+        border: solid var(--component-outline) 2px;
+        border-radius: 1em;
+        list-style: none;
+
+          li {
+            p {
+              margin: 0;
+              padding-bottom: 0.5em;
+            }
+          }
+    }
+</style>
