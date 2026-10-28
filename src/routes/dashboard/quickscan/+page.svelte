@@ -12,8 +12,8 @@
 
 <BarChart
   title="voertuigtypes"
-  chartLabels={data.vehicletype}
-  chartData={data.vehicleamount}
+  chartLabels={data.vehicleType}
+  chartData={data.vehicleAmount}
   dataLabel="Soorten voertuigtypes"
   onReload={invalidateAll}
 />
@@ -21,7 +21,7 @@
 <BarChart
 title="Transporttypes"
 chartLabels={data.transportType}
-chartData={data.transportamount}
+chartData={data.transportAmount}
 dataLabel="Soorten transporttypes"
 onReload={invalidateAll}
 />
@@ -29,11 +29,18 @@ onReload={invalidateAll}
 <BarChart
 title="Activiteit"
 chartLabels={data.activityType}
-chartData={data.activityamount}
+chartData={data.activityAmount}
 dataLabel="Soorten activiteiten"
 onReload={invalidateAll}
 />
 
+<BarChart
+title="Locatie Activiteit"
+chartLabels={data.activityLocationType}
+chartData={data.activityLocationAmount}
+dataLabel="Locaties activiteiten"
+onReload={invalidateAll}
+/>
 
 <!-- Tijdelijk: toont de geparste data om te checken of het inladen werkt.
      JSON.stringify maakt het object leesbaar, 2 = inspringing) -->
