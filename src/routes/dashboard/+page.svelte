@@ -21,10 +21,10 @@
 
 <ul class="grid">
   <li class="graphs">
-    <LineChart title="Line Chart" chartLabels={drinks} chartData={staticData1} dataLabel="Data 1" />
+    <ChartTemplate chartType="line" title="Line Chart" chartLabels={drinks} chartData={staticData1} dataLabel="Data 1" />
   </li>
     <li class="graphs">
-    <BarChart title="Bar Chart" chartLabels={colors} chartData={staticData2} dataLabel="Data 2"/>
+    <ChartTemplate chartType="bar" title="Bar Chart" chartLabels={colors} chartData={staticData2} dataLabel="Data 2"/>
   </li>
 </ul>
 
