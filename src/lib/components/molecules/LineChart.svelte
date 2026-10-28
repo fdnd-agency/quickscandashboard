@@ -1,6 +1,5 @@
 <script>
   import Chart from 'chart.js/auto'
-  import '../../../stylesheet.css'
 
   let {
     title,
