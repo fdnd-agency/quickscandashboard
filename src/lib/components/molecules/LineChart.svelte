@@ -11,14 +11,23 @@
   } = $props()
 
   let canvas = $state()
+  // haalt de waarde van een CSS-variabele op
 
-  // kleur van de text
-  Chart.defaults.color = '#E5E1F4'
-  // kleur van de grafiek gridlines
-  Chart.defaults.borderColor = 'hsl(257, 36%, 27%)'
+  // maak een cssVar functie
+  const cssVar = (name) =>
+    getComputedStyle(document.documentElement).getPropertyValue(name).trim()
 
   $effect(() => {
     if (!canvas) return
+
+    // maak van css-variablele een JS-variabele
+    const textColor = cssVar('--text-color')
+    const gridColor = cssVar('--component-outline')
+
+    // kleur van de text
+    Chart.defaults.color = textColor
+    // kleur van de grafiek gridlines
+    Chart.defaults.borderColor = gridColor
 
     const chart = new Chart(canvas, {
       type: 'line',
