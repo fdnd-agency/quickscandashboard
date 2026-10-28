@@ -25,16 +25,26 @@ export async function load({ fetch }) {
 //  const [type] betekent: heb je dit type nog niet gezien? begin dan bij 0
 //  key en value kijken op welke plaats welk voertuig staat.
 
-  const counts = {};
+// Voertuigtype
+  const vehiclecounts = {};
+  const transportcounts = {};
+
     for (const row of parsed.data) {
-        const type = row.Voertuigtype;
-        counts[type] = (counts[type] ?? 0) + 1;
+        const vehicle = row.Voertuigtype;
+        const transport = row.Transporttype;
+        vehiclecounts[vehicle] = (vehiclecounts[vehicle] ?? 0) + 1;
+        transportcounts[transport] = (transportcounts[transport] ?? 0) + 1;
     }
 
         return {
-        voertuigLabels: Object.keys(counts),
-        voertuigAantallen: Object.values(counts)
+            vehicletype: Object.keys(vehiclecounts),
+            vehicleamount: Object.values(vehiclecounts),
+
+            transportType: Object.keys(transportcounts),
+            transportamount: Object.values(transportcounts),
+            
     }
+    
 }
 
 // Voorbeeld van wat je berekent

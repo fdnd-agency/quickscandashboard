@@ -12,10 +12,18 @@
 
 <BarChart
   title="voertuigtypes"
-  chartLabels={data.voertuigLabels}
-  chartData={data.voertuigAantallen}
+  chartLabels={data.vehicletype}
+  chartData={data.vehicleamount}
   dataLabel="Soorten voertuigtypes"
   onReload={invalidateAll}
+/>
+
+<BarChart
+title="Transporttypes"
+chartLabels={data.transportType}
+chartData={data.transportamount}
+dataLabel="Soorten transporttypes"
+onReload={invalidateAll}
 />
 
 <!-- Tijdelijk: toont de geparste data om te checken of het inladen werkt.
