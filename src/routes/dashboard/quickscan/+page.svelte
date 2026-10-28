@@ -1,5 +1,5 @@
 <script>
-    import BarChart from '#lib/components/molecules/BarChart.svelte';
+    import ChartTemplate from '#lib/components/molecules/ChartTemplate.svelte';
     
     // invalidateAll laat SvelteKit alle load()-functies opnieuw draaien,
     // zodat de reload-knop de nieuwste data uit de spreadsheet ophaalt
@@ -10,7 +10,8 @@
 </script>
 
 
-<BarChart
+<ChartTemplate
+  chartType='line'
   title="voertuigtypes"
   chartLabels={data.voertuigLabels}
   chartData={data.voertuigAantallen}
