@@ -28,12 +28,16 @@ export async function load({ fetch }) {
 // Voertuigtype
   const vehiclecounts = {};
   const transportcounts = {};
+  const activitycounts = {};
 
     for (const row of parsed.data) {
         const vehicle = row.Voertuigtype;
         const transport = row.Transporttype;
+        const activity = row.Activiteit;
         vehiclecounts[vehicle] = (vehiclecounts[vehicle] ?? 0) + 1;
         transportcounts[transport] = (transportcounts[transport] ?? 0) + 1;
+        activitycounts[activity] = (activitycounts[activity] ?? 0) + 1;
+
     }
 
         return {
@@ -43,6 +47,9 @@ export async function load({ fetch }) {
             transportType: Object.keys(transportcounts),
             transportamount: Object.values(transportcounts),
             
+            activityType: Object.keys(activitycounts),
+            activityamount: Object.values(activitycounts),
+           
     }
     
 }
