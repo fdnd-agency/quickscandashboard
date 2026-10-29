@@ -24,6 +24,6 @@
 	min-height: 100vh;
 	display: grid;
 	place-items: center;
-	margin-left: 250px;
+	margin-left: 48px;
 }
 </style>
