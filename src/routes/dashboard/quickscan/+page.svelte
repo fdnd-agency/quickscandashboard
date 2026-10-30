@@ -14,28 +14,28 @@
   dataLabel="Soorten voertuigtypes"
 />
 
-<BarChart
+<ChartTemplate
+chartType='bar'
 title="Transporttypes"
 chartLabels={data.transportType}
 chartData={data.transportAmount}
 dataLabel="Soorten transporttypes"
-onReload={invalidateAll}
 />
 
-<BarChart
+<ChartTemplate
+chartType='bar'
 title="Activiteit"
 chartLabels={data.activityType}
 chartData={data.activityAmount}
 dataLabel="Soorten activiteiten"
-onReload={invalidateAll}
 />
 
-<BarChart
+<ChartTemplate
+chartType='bar'
 title="Locatie Activiteit"
 chartLabels={data.activityLocationType}
 chartData={data.activityLocationAmount}
 dataLabel="Locaties activiteiten"
-onReload={invalidateAll}
 />
 
 <!-- Tijdelijk: toont de geparste data om te checken of het inladen werkt.
