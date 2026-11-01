@@ -1,4 +1,4 @@
-# Coding the Curbs - Quickscan Dashboard
+## Inhoudsopgave
 
 Readme Quickscan Dashboard
 
