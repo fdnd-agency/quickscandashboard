@@ -105,8 +105,9 @@
     }
 
     .logo {
-        padding: var(--spacing-16px) var(--spacing-8px);
+        padding: var(--spacing-16px) var(--spacing-16px);
     }
+
 
     .logo-min {
         display: none;
