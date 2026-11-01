@@ -104,31 +104,29 @@
         width: 250px;
     }
 
-    .logodiv {
-        padding: 0 8px;
+    .logo {
+        padding: var(--spacing-16px) var(--spacing-16px);
     }
 
-    .logo {
-        padding: 1rem .25rem;
-    }
 
     .logo-min {
         display: none;
-        padding: 1rem 0 1rem;
+        padding: var(--spacing-8px) var(--spacing-4px) var(--spacing-16px);
+        overflow: auto;
     }
 
     .data-insights,
     .manage,
     .quickscan,
     .profile  {
-        padding: 8px;
+        padding: var(--spacing-8px);
     }
 
     h2 {
         font-size: 13px;
         font-weight: 500;
-        padding: 0 8px;
-        margin: 0 0 .5rem;
+        padding: 0 var(--spacing-8px);
+        margin: 0 0 var(--spacing-8px);
         opacity: .6;
     }
 
@@ -152,9 +150,9 @@
     li a {
         display: flex;
         align-items: center;
-        gap: .3rem;
+        gap: var(--spacing-4px);
         font-weight: 400;
-        padding: .3rem .5rem;
+        padding: var(--spacing-4px) var(--spacing-8px);
     }
 
     li a[aria-current="page"]{
@@ -186,8 +184,8 @@
         display: flex;
         align-items: center;
         align-self: flex-start;
-        margin: .5rem;
-        padding: .5rem;
+        margin: var(--spacing-8px);
+        padding: var(--spacing-8px);
         border-radius: var(--border-radius);
         cursor: pointer;
         transition: background-color .15s;

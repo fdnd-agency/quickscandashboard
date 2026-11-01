@@ -71,7 +71,7 @@
   /* chart styling */
 
 ul.wrapper {
-    padding: 1em;
+    padding: var(--spacing-16px);
     background: var(--component-background);
     color: var(--text-color);
     border: solid var(--component-outline) 2px;
@@ -81,7 +81,7 @@ ul.wrapper {
       li {
         p {
           margin: 0;
-          padding-bottom: 0.5em;
+          padding-bottom: var(--spacing-8px);
         }
       }
 }

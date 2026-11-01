@@ -33,8 +33,8 @@
 
   ul.grid {
     display: grid;
-    margin: 1em;
-    gap: 1em;
+    margin: var(--spacing-8px);
+    gap: var(--spacing-16px);
     list-style: none;
 
     li {
