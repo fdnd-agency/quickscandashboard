@@ -16,6 +16,14 @@
     --chart-3: hsl(167, 52%, 51%);
     --chart-4: hsl(25, 86%, 66%);
     --chart-5: hsl(318, 79%, 70%);
+
+    /* Spacing systeem */
+    --spacing-4px: 4px;
+    --spacing-8px: 8px;
+    --spacing-16px: 17px;
+    --spacing-23px: 23px;
+    --spacing-34px: 34px;
+
 }
 
 @media(prefers-color-scheme: dark) {
