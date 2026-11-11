@@ -16,10 +16,10 @@ Readme Quickscan Dashboard
 - [Link naar CONTRIBUTING.MD](#link-naar-contributingmd)
 
 ## Live link
+
 https://quickscandashboard.netlify.app/dashboard/quickscan
 
 ## Installatie-instructies
-
 
 ### Installeren
 
@@ -58,16 +58,16 @@ npm run dev -- --open
 
 ### Waar vind je wat
 
-| Route | Wat het is |
-| --- | --- |
-| `/dashboard` | Dashboard van de opdrachtgever |
+| Route                  | Wat het is                               |
+| ---------------------- | ---------------------------------------- |
+| `/dashboard`           | Dashboard van de opdrachtgever           |
 | `/dashboard/quickscan` | Grafieken op basis van de ingevulde data |
 
 ### Databron
 
 De grafieken halen hun data uit een als CSV gepubliceerde Google-spreadsheet. De URL staat in `src/routes/dashboard/quickscan/+page.server.js`.
 
-Krijg je de melding *"Er ging iets mis bij het ophalen van de data"* (HTTP 500), dan is de spreadsheet niet meer publiek toegankelijk. 
+Krijg je de melding _"Er ging iets mis bij het ophalen van de data"_ (HTTP 500), dan is de spreadsheet niet meer publiek toegankelijk.
 
 ### Productie-build
 
@@ -83,39 +83,37 @@ npm run preview
 
 Voor deployen gebruiken we `@sveltejs/adapter-auto`, die automatisch de juiste adapter voor Netlify kiest.
 
-
-
-
 zie de wiki
 https://github.com/fdnd-agency/quickscandashboard/wiki/installatie-app
 
 ## Beschrijving van de site
-Onze pagina is een toevoeging aan het al bestaande QuickScan-dashboard. Wij bouwen een nieuwe pagina die leidt naar de inzichten van de data die op straat verzameld wordt. 
+
+Onze pagina is een toevoeging aan het al bestaande QuickScan-dashboard. Wij bouwen een nieuwe pagina die leidt naar de inzichten van de data die op straat verzameld wordt.
 De data komt uit de spreadsheet die bij de quickscan wordt ingevuld. Wij lezen die in en zetten hem om in grafieken, zodat je in één oogopslag ziet welke voertuigen, transporttypes en activiteiten er voorkomen en op welke plek.
-
-
 
 ## Mockups van de site
 
 <img width="979" height="807" alt="image" src="https://github.com/user-attachments/assets/6cc6a602-1a56-4f00-bbb3-dae0fa62d665" />
 <img width="1197" height="711" alt="image" src="https://github.com/user-attachments/assets/7d988d8b-f08f-4a70-9331-6daec2649fdb" />
 
-
 ## Gebruik van de site
+
 Je landt op de dashboardpagina. Hier krijg je meteen inzicht in de resultaten uit de spreadsheet d.m.v. grafieken. Er is via het zijmenu één pagina beschikbaar: de quickscanpagina. Hier zie je line- en barcharts.
 
 ## Bronnen
+
 https://www.chartjs.org/ (Chart.js-documentatie)
 
 https://www.youtube.com/watch?v=-FN16LKpkzM (chartjs tutorial)
 
 https://www.npmjs.com/package/papaparse(papaparse documentatie)
 
-
 ## Designkeuzes
+
 Wij hebben een eigen nieuwe styleguide gemaakt van het quickscan dashboard en deze voor ons eigen dashboard gebruikt, alle kleuren, tekstgroottes gaps en widths hebben wij zelf na-gemaakt en geïmplementeerd, ook hebben we een werkend en getest light en dark mode. Het design zelf van het dashboard daarentegen is een kopie van het al bestaande dashboard.
 
 ## Kenmerken van de site (code)
+
 We hebben specifieke code gemaakt zodat de grafieken die in JS worden geladen en gestyled, de variabelen van de stylesheet kunnen lezen zodat de light en darkmode ook werken binnen de JS van de grafieken.
 
 De grafieken werken via Chart.js https://www.chartjs.org/.
@@ -123,14 +121,12 @@ De data van de grafieken worden via een Google Spreadsheet ingeladen. Dit wordt 
 
 We hebben ons werk gecompacteerd naar zo min mogelijk code voor zoveel mogelijk functionaliteit dit komt omdat we ons herhalende code op hebben gedeeld via componenten!
 
-
 ## Link naar code-conventies
-[codeconventies] 
+
+[codeconventies]
 (https://github.com/fdnd-agency/quickscandashboard/wiki/Code%E2%80%90conventies)
 
 ## Link naar CONTRIBUTING.MD
+
 [link naar contributing]
 (https://github.com/fdnd-agency/quickscandashboard/blob/dev/contributing.md)
-
-
-
