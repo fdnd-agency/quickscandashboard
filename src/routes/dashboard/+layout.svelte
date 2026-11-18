@@ -6,9 +6,6 @@
 	let { children } = $props();
 </script>
 
-
-
-
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<title>Coding The Curbs Dashboard</title>
@@ -21,9 +18,9 @@
 
 <style>
 	main {
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
-	margin-left: 250px;
-}
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+		margin-left: 250px;
+	}
 </style>

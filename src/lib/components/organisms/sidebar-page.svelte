@@ -1,199 +1,242 @@
 <script>
-    import { page } from '$app/state';
+	import { page } from '$app/state';
 
+	// Geïmporteerde favicons
+	import sidebar from '#lib/assets/Sidebar.svg';
+	import daydetail from '#lib/assets/daydetail.svg';
+	import groups from '#lib/assets/groups.svg';
+	import locations from '#lib/assets/locations.svg';
+	import overview from '#lib/assets/overview.svg';
+	import scans from '#lib/assets/scans.svg';
+	import selector from '#lib/assets/selector.svg';
+	import support from '#lib/assets/support.svg';
+	import trends from '#lib/assets/trends.svg';
+	import logoctc from '#lib/assets/logo-ctc.svg';
+	import logominctc from '#lib/assets/logo-min-ctc.svg';
 
-// Geïmporteerde favicons
-    import sidebar from '#lib/assets/Sidebar.svg';
-    import daydetail from '#lib/assets/daydetail.svg';
-    import groups from '#lib/assets/groups.svg';
-    import locations from '#lib/assets/locations.svg';
-    import overview from '#lib/assets/overview.svg';
-    import scans from '#lib/assets/scans.svg';
-    import selector from '#lib/assets/selector.svg';
-    import support from '#lib/assets/support.svg';
-    import trends from '#lib/assets/trends.svg';
-    import logoctc from '#lib/assets/logo-ctc.svg';
-    import logominctc from '#lib/assets/logo-min-ctc.svg';
-
-    let { data } = $props();
-
-
+	let { data } = $props();
 </script>
 
-
 <div class="collapsible-menu">
+	<nav class="menu-content" id="side-menu">
+		<div class="logodiv">
+			<a href="/dashboard">
+				<img
+					src={logoctc}
+					alt="coding the curbs"
+					class="logo"
+					height="32"
+					width="93.45"
+					fetchpriority="high"
+				/>
+				<img src={logominctc} alt="" class="logo-min" height="40" width="40" />
+			</a>
+		</div>
 
-    <nav class="menu-content" id="side-menu"> 
+		<div class="data-insights">
+			<h2>Data & Insights</h2>
+			<ul class="data-insights-list">
+				<!-- aria-current markeert de actieve pagina voor screenreaders én voor de highlight in CSS -->
+				<li>
+					<a
+						href="/dashboard/overview"
+						aria-current={page.url.pathname === '/dashboard/overview' ? 'page' : undefined}
+						><img src={overview} alt="" /><span>Overview</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/dashboard/trends"
+						aria-current={page.url.pathname === '/dashboard/trends' ? 'page' : undefined}
+						><img src={trends} alt="" /><span>Trends</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/dashboard/daydetail"
+						aria-current={page.url.pathname === '/dashboard/daydetail' ? 'page' : undefined}
+						><img src={daydetail} alt="" /><span>Day detail</span></a
+					>
+				</li>
+			</ul>
+		</div>
 
-        <div class="logodiv">
-            <a href="/dashboard">
-                <img src={logoctc} alt="coding the curbs" class="logo" height="32" width="93.45" fetchpriority="high">
-                <img src={logominctc} alt="" class="logo-min" height="40" width="40">
-            </a>
-        </div>
+		<hr />
 
-        <div class="data-insights">
-            <h2>Data & Insights</h2>
-            <ul class="data-insights-list">
-                <!-- aria-current markeert de actieve pagina voor screenreaders én voor de highlight in CSS -->
-                <li><a href="/dashboard/overview" aria-current={page.url.pathname === '/dashboard/overview' ? 'page' : undefined}><img src={overview} alt=""><span>Overview</span></a></li>
-                <li><a href="/dashboard/trends" aria-current={page.url.pathname === '/dashboard/trends' ? 'page' : undefined}><img src={trends} alt=""><span>Trends</span></a></li>
-                <li><a href="/dashboard/daydetail" aria-current={page.url.pathname === '/dashboard/daydetail' ? 'page' : undefined}><img src={daydetail} alt=""><span>Day detail</span></a></li>
-            </ul>
-        </div>
+		<div class="manage">
+			<h2>Manage</h2>
+			<ul class="manage-list">
+				<li>
+					<a
+						href="/dashboard/locations"
+						aria-current={page.url.pathname === '/dashboard/locations' ? 'page' : undefined}
+						><img src={locations} alt="" /><span>Locations</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/dashboard/groups"
+						aria-current={page.url.pathname === '/dashboard/groups' ? 'page' : undefined}
+						><img src={groups} alt="" /><span>Groups</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/dashboard/selections"
+						aria-current={page.url.pathname === '/dashboard/selections' ? 'page' : undefined}
+						><img src={selector} alt="" /><span>Selections</span></a
+					>
+				</li>
+			</ul>
+		</div>
 
-        <hr>
+		<hr />
 
-        <div class="manage">
-            <h2>Manage</h2>
-            <ul class="manage-list">
-                <li><a href="/dashboard/locations" aria-current={page.url.pathname === '/dashboard/locations' ? 'page' : undefined}><img src={locations} alt=""><span>Locations</span></a></li>
-                <li><a href="/dashboard/groups" aria-current={page.url.pathname === '/dashboard/groups' ? 'page' : undefined}><img src={groups} alt=""><span>Groups</span></a></li>
-                <li><a href="/dashboard/selections" aria-current={page.url.pathname === '/dashboard/selections' ? 'page' : undefined}><img src={selector} alt=""><span>Selections</span></a></li>
-            </ul>
-        </div>
+		<div class="quickscan">
+			<h2>Quickscan</h2>
+			<ul class="quickscan-list">
+				<li>
+					<a
+						href="/dashboard/quickscan"
+						aria-current={page.url.pathname === '/dashboard/quickscan' ? 'page' : undefined}
+						><img src={scans} alt="" /><span>Quickscan</span></a
+					>
+				</li>
+			</ul>
+		</div>
 
-        <hr>
+		<div class="profile">
+			<ul class="profile-list">
+				<li><a href="/dashboard/support"><img src={support} alt="" /><span>Support</span></a></li>
+				<li><a href="/dashboard/profiel"><span>Profiel</span></a></li>
+			</ul>
+		</div>
+	</nav>
 
-        <div class="quickscan">
-            <h2>Quickscan</h2>
-            <ul class="quickscan-list">
-                <li><a href="/dashboard/quickscan" aria-current={page.url.pathname === '/dashboard/quickscan' ? 'page' : undefined}><img src={scans} alt=""><span>Quickscan</span></a></li>
-            </ul>
-        </div>
-
-        <div class="profile">
-            <ul class="profile-list">
-                <li><a href="/dashboard/support"><img src={support} alt=""><span>Support</span></a></li>
-                <li><a href="/dashboard/profiel"><span>Profiel</span></a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <input id="menu" class="visually-hidden" type="checkbox">
-    <label for="menu"><img class="menu-svg" src="{sidebar}" alt="Menu in- of uitklappen"></label>
-
+	<input id="menu" class="visually-hidden" type="checkbox" />
+	<label for="menu"><img class="menu-svg" src={sidebar} alt="Menu in- of uitklappen" /></label>
 </div>
 
 <style>
+	.collapsible-menu {
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+	}
 
-    .collapsible-menu {
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-    }
+	.collapsible-menu:has(:checked) {
+		.menu-content {
+			width: 3rem;
+		}
+		.logo {
+			display: none;
+		}
+		.logo-min {
+			display: block;
+		}
+		span {
+			overflow: hidden;
+		}
+		h2 {
+			display: none;
+		}
+	}
 
-    
-    .collapsible-menu:has(:checked) {
-        .menu-content { width: 3rem }
-        .logo { display: none}
-        .logo-min { display: block}
-        span{overflow: hidden;}
-        h2 {display: none;}
-    }
+	.menu-content {
+		background-color: var(--component-background);
+		color: var(--text-color);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 250px;
+	}
 
+	.logo {
+		padding: var(--spacing-16px) var(--spacing-16px);
+	}
 
-    .menu-content {
-        background-color: var(--component-background);
-        color: var(--text-color);
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 250px;
-    }
+	.logo-min {
+		display: none;
+		padding: var(--spacing-8px) var(--spacing-4px) var(--spacing-16px);
+		overflow: auto;
+	}
 
-    .logo {
-        padding: var(--spacing-16px) var(--spacing-16px);
-    }
+	.data-insights,
+	.manage,
+	.quickscan,
+	.profile {
+		padding: var(--spacing-8px);
+	}
 
+	h2 {
+		font-size: 13px;
+		font-weight: 500;
+		padding: 0 var(--spacing-8px);
+		margin: 0 0 var(--spacing-8px);
+		opacity: 0.6;
+	}
 
-    .logo-min {
-        display: none;
-        padding: var(--spacing-8px) var(--spacing-4px) var(--spacing-16px);
-        overflow: auto;
-    }
+	hr {
+		width: 100%;
+		margin: 0;
+		opacity: 0.2;
+	}
 
-    .data-insights,
-    .manage,
-    .quickscan,
-    .profile  {
-        padding: var(--spacing-8px);
-    }
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
-    h2 {
-        font-size: 13px;
-        font-weight: 500;
-        padding: 0 var(--spacing-8px);
-        margin: 0 0 var(--spacing-8px);
-        opacity: .6;
-    }
+	a {
+		text-decoration: none;
+	}
 
-    hr {
-        width: 100%;
-        margin: 0 ;
-        opacity: .2;
-    }
+	li a {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-4px);
+		font-weight: 400;
+		padding: var(--spacing-4px) var(--spacing-8px);
+	}
 
+	li a[aria-current='page'] {
+		background-color: var(--active-state);
+		border-radius: var(--border-radius);
+	}
 
-    ul {
-        list-style: none; 
-        padding: 0;   
-        margin: 0;    
-    }
+	a:hover {
+		background-color: var(--active-state);
+		border-radius: var(--border-radius);
+	}
 
-    a {
-        text-decoration: none;
-    }
+	li img {
+		width: 15px;
+		height: 15px;
+	}
 
-    li a {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-4px);
-        font-weight: 400;
-        padding: var(--spacing-4px) var(--spacing-8px);
-    }
+	.profile {
+		margin-top: auto;
+	}
 
-    li a[aria-current="page"]{
-        background-color: var(--active-state);
-        border-radius: var(--border-radius);
-    }
+	input {
+		align-self: flex-start;
+	}
 
-    a:hover {
-        background-color: var(--active-state);
-        border-radius: var(--border-radius);
-    }
+	label {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		margin: var(--spacing-8px);
+		padding: var(--spacing-8px);
+		border-radius: var(--border-radius);
+		cursor: pointer;
+		transition: background-color 0.15s;
+	}
 
-    li img {
-        width: 15px;
-        height: 15px;
-    }
-
-
-    .profile {
-        margin-top: auto;
-    }
-
-
-    input {
-        align-self: flex-start;
-    }
-
-    label {
-        display: flex;
-        align-items: center;
-        align-self: flex-start;
-        margin: var(--spacing-8px);
-        padding: var(--spacing-8px);
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        transition: background-color .15s;
-    }
-
-    label:hover {
-        background-color: var(--hover-color);
-    }
-
-
+	label:hover {
+		background-color: var(--hover-color);
+	}
 </style>

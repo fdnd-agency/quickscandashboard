@@ -1,7 +1,7 @@
-title: "Quickscan Dashboard"
-client: "Coding the Curbs"
-status: "active"
+title: 'Quickscan Dashboard'
+client: 'Coding the Curbs'
+status: 'active'
 years: [2]
-main_link: ""
-dev_link: ""
-tech_stack: ["SvelteKit", "Directus"]
+main_link: ''
+dev_link: ''
+tech_stack: ['SvelteKit', 'Directus']
