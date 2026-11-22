@@ -3,5 +3,5 @@ client: "Coding the Curbs"
 status: "active"
 years: [2]
 main_link: ""
-dev_link: ""
+dev_link: "https://quickscandashboard.netlify.app/dashboard"
 tech_stack: ["SvelteKit", "Directus"]
