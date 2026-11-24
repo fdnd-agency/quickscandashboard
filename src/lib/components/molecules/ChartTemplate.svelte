@@ -11,9 +11,23 @@
 	$effect(() => {
 		if (!canvas) return;
 
+		// onderstaande dataset regels zijn gemaakt door claude, heeft te maken met het uitlezen van verschillende
+		// kleuren uit de stylesheet met JS, hij telt langs de variabelen (--chart-1 & --chart-2 etc)
 		// maak van css-variablele een JS-variabele
 		const textColor = cssVar('--text-color');
 		const gridColor = cssVar('--component-outline');
+
+		// Palet uit de stylesheet
+		const palette = ['--chart-1', '--chart-2', '--chart-3', '--chart-4', '--chart-5'].map((name) =>
+			cssVar(name)
+		);
+
+		// pie en doughnut gedragen zich anders dan line en bar
+		const isCircular = chartType === 'pie' || chartType === 'doughnut';
+
+		// één kleur per segment, palet loopt rond als er meer data dan kleuren is
+		const data = $state.snapshot(chartData);
+		const segmentColors = data.map((_, i) => palette[i % palette.length]);
 
 		// kleur van de text
 		Chart.defaults.color = textColor;
@@ -27,20 +41,21 @@
 				datasets: [
 					{
 						label: dataLabel,
-						data: $state.snapshot(chartData),
+						data,
 
 						// kleur van het vierkant op de hover
-						backgroundColor: ['hsl(257, 89%, 74%)'],
+						backgroundColor: isCircular ? segmentColors : palette[0],
 						// kleur/styling van de line
-						borderColor: ['hsl(257, 89%, 74%)'],
-						tension: 0.4,
-						pointStyle: false
+						borderColor: isCircular ? cssVar('--component-background') : palette[0],
+						borderWidth: isCircular ? 2 : undefined,
+						tension: isCircular ? undefined : 0.4,
+						pointStyle: isCircular ? undefined : false
 					}
 				]
 			},
 			options: {
 				plugins: {
-					legend: { display: false }
+					legend: { display: isCircular }
 				}
 			}
 		});

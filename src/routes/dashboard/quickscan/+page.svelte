@@ -5,7 +5,7 @@
 </script>
 <section>
 <ChartTemplate
-	chartType="line"
+	chartType="bar"
 	title="voertuigtypes"
 	chartLabels={data.vehicleType}
 	chartData={data.vehicleAmount}
@@ -21,7 +21,7 @@
 />
 
 <ChartTemplate
-	chartType="bar"
+	chartType="pie"
 	title="Activiteit"
 	chartLabels={data.activityType}
 	chartData={data.activityAmount}

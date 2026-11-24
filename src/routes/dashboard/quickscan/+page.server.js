@@ -1,6 +1,19 @@
 import { error } from '@sveltejs/kit';
 import Papa from 'papaparse';
 
+// Tel hoe vaak elke waarde in een kolom voorkomt.
+// ?? 0 betekent: heb je deze waarde nog niet gezien? begin dan bij 0
+const countColumn = (rows, column) => {
+	const counts = {};
+
+	for (const row of rows) {
+		const value = row[column];
+		counts[value] = (counts[value] ?? 0) + 1;
+	}
+
+	return counts;
+};
+
 // Haalt de quickscan-data op uit de als CSV gepubliceerde Google Spreadsheet
 // en zet die om naar objecten, zodat de pagina er grafieken van kan maken.
 export async function load({ fetch }) {
@@ -22,28 +35,12 @@ export async function load({ fetch }) {
 		header: true
 	});
 
-	// Voertuigtype
-	const vehicleCounts = {};
-	const transportCounts = {};
-	const activityCounts = {};
-	const activityLocationCounts = {};
+	const vehicleCounts = countColumn(parsed.data, 'Voertuigtype');
+	const transportCounts = countColumn(parsed.data, 'Transporttype');
+	const activityCounts = countColumn(parsed.data, 'Activiteit');
+	const activityLocationCounts = countColumn(parsed.data, 'Plek activiteit');
 
-	//  tel hoe vaak elk voertuigtype voorbij komt
-	//  const [vehicle] ?? 0) + 1 betekent: heb je dit type nog niet gezien? begin dan bij 0
-
-	for (const row of parsed.data) {
-		const vehicle = row.Voertuigtype;
-		const transport = row.Transporttype;
-		const activity = row.Activiteit;
-		const activityLocation = row['Plek activiteit'];
-
-		vehicleCounts[vehicle] = (vehicleCounts[vehicle] ?? 0) + 1;
-		transportCounts[transport] = (transportCounts[transport] ?? 0) + 1;
-		activityCounts[activity] = (activityCounts[activity] ?? 0) + 1;
-		activityLocationCounts[activityLocation] = (activityLocationCounts[activityLocation] ?? 0) + 1;
-	}
-
-	//  key en value kijken op welke plaats welk voertuig staat.
+	// keys zijn de namen voor de labels, values de aantallen voor de staven/segmenten
 	return {
 		vehicleType: Object.keys(vehicleCounts),
 		vehicleAmount: Object.values(vehicleCounts),
@@ -59,9 +56,9 @@ export async function load({ fetch }) {
 	};
 }
 
-// Voorbeeld van wat je berekent
+// Voorbeeld van wat countColumn berekent
 // rij 1: Voertuigtype = 'Bestelbus'
-// vehiclecounts['Bestelbus'] = (vehiclecounts['Bestelbus'] ?? 0) + 1;
+// counts['Bestelbus'] = (counts['Bestelbus'] ?? 0) + 1;
 // → { Bestelbus: 1 }
 
 // rij 2: Voertuigtype = 'Bakwagen'
