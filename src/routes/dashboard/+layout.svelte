@@ -17,10 +17,17 @@
 </main>
 
 <style>
+	:global(body:has(.collapsible-menu :checked)) {
+		/*border: 10px solid red;*/
+		main {
+			margin-left: 75px;
+		}
+	}
+
 	main {
 		min-height: 100vh;
 		display: grid;
 		place-items: center;
-		margin-left: 250px;
+		margin-left: 275px;
 	}
 </style>
