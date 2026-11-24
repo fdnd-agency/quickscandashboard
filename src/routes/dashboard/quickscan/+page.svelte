@@ -3,7 +3,7 @@
 
 	let { data } = $props();
 </script>
-
+<section>
 <ChartTemplate
 	chartType="line"
 	title="voertuigtypes"
@@ -35,7 +35,12 @@
 	chartData={data.activityLocationAmount}
 	dataLabel="Locaties activiteiten"
 />
+</section>
 
-<!-- Tijdelijk: toont de geparste data om te checken of het inladen werkt.
-     JSON.stringify maakt het object leesbaar, 2 = inspringing) -->
-<!-- <pre>{JSON.stringify(data.parsed.data, null, 2)}</pre> -->
+<style>
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+</style>
