@@ -1,5 +1,3 @@
-## Inhoudsopgave
-
 Readme Quickscan Dashboard
 
 ## Inhoudsopgave
@@ -111,6 +109,10 @@ https://www.npmjs.com/package/papaparse(papaparse documentatie)
 ## Designkeuzes
 
 Wij hebben een eigen nieuwe styleguide gemaakt van het quickscan dashboard en deze voor ons eigen dashboard gebruikt, alle kleuren, tekstgroottes gaps en widths hebben wij zelf na-gemaakt en geïmplementeerd, ook hebben we een werkend en getest light en dark mode. Het design zelf van het dashboard daarentegen is een kopie van het al bestaande dashboard.
+
+## Datamodel
+We maken gebruik van de [spreadsheet](https://docs.google.com/spreadsheets/d/1vEsKb2zxGMj8OP45Csb_kChSGUk_uDHClx9Ht0UwPTk/edit?gid=0#gid=0) met dummydata die we van onze opdrachtgever hebben gekregen. We maken gebruik van de kolommen met data en zetten 
+dit om naar bar of pie grafieken.
 
 ## Kenmerken van de site (code)
 
