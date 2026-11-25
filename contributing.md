@@ -35,10 +35,13 @@
 
 ### wat zijn de problemen
 
-- duidelijker issues schrijven. er is nu 1 nice issue de rest is troep
-- alle issues moeten eerst geschreven worden voordat je begint met werken
-- overleggen met team wat er in het issue moet.
 
+- chart van UL naar article verranderen 
+- een H1 bovenaan met de naam van de page (op de quickscanpage de titel quickscanpage)
+- ervoor zorgen dat de chart werkt zonder JS
+- zorg ervoor dat de charts leesbaar zijn met een screenreader
+- component van charttemplate naar chart hernoemen
+- verder aan mobile nav fixen (moet hele scherm innemen als hij openstaat, als hij dicht is moet de sidebar niet zichtbaar zijn, alleen de knop om het te openen)
 ---
 
 ## issues
