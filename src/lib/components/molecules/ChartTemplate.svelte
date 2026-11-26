@@ -4,10 +4,20 @@
 	let { title, chartLabels, chartData, dataLabel, chartType } = $props();
 
 	let canvas = $state();
+	// wordt true zodra de grafiek getekend is → dan verbergen we de tabel visueel
+	let ready = $state(false);
+
+	// pie en doughnut gedragen zich anders dan line en bar
+	const isCircular = $derived(chartType === 'pie' || chartType === 'doughnut');
+
+	// voor de fallback-tabel: totaal (voor percentages) en hoogste waarde (voor balkbreedte)
+	const total = $derived(chartData.reduce((a, b) => a + b, 0) || 1);
+	const max = $derived(Math.max(...chartData, 0) || 1);
 
 	// maak een cssVar functie
 	const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
+	// $effect draait alleen in de browser, dus alleen als JavaScript werkt
 	$effect(() => {
 		if (!canvas) return;
 
@@ -21,9 +31,6 @@
 		const palette = ['--chart-1', '--chart-2', '--chart-3', '--chart-4', '--chart-5'].map((name) =>
 			cssVar(name)
 		);
-
-		// pie en doughnut gedragen zich anders dan line en bar
-		const isCircular = chartType === 'pie' || chartType === 'doughnut';
 
 		// één kleur per segment, palet loopt rond als er meer data dan kleuren is
 		const data = $state.snapshot(chartData);
@@ -60,19 +67,46 @@
 			}
 		});
 
+		ready = true;
+
 		// wordt uitgevoerd vóór de volgende run en bij het verwijderen van het component
 		return () => chart.destroy();
 	});
 </script>
 
-<ul class="wrapper">
-	<li class="head">
-		<h2>{title}</h2>
-	</li>
-	<li>
-		<canvas bind:this={canvas}></canvas>
-	</li>
-</ul>
+<article class="wrapper">
+	<h2>{title}</h2>
+	<canvas bind:this={canvas} hidden={!ready} aria-hidden="true"></canvas>
+	<table class:visually-hidden={ready}>
+		<caption>{dataLabel}</caption>
+		<thead>
+			<tr>
+				<th scope="col">Categorie</th>
+				<th scope="col">Waarde</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each chartLabels as label, i}
+				<tr>
+					<th scope="row">{label}</th>
+					<td>
+						<div class="bar-row">
+							<span
+								class="bar"
+								style:width="{(chartData[i] / max) * 100}%"
+								style:background="var(--chart-{isCircular ? (i % 5) + 1 : 1})"
+							></span>
+							<span>
+								{chartData[i]}
+								{#if isCircular}({Math.round((chartData[i] / total) * 100)}%){/if}
+							</span>
+						</div>
+					</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+</article>
 
 <style>
 	/* chart styling */
@@ -90,5 +124,46 @@
 			font-size: var(--text-size-s);
 			font-weight: 500;
 		}
+	}
+
+	/* fallback-tabel */
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	caption {
+		text-align: left;
+		padding-bottom: var(--spacing-8px);
+		opacity: 0.8;
+	}
+
+	th,
+	td {
+		padding: var(--spacing-4px) 0;
+		text-align: left;
+		font-weight: 400;
+		border-bottom: 1px solid var(--component-outline);
+	}
+
+	thead th {
+		font-weight: 500;
+	}
+
+	td {
+		width: 70%;
+	}
+
+	.bar-row {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-8px);
+	}
+
+	.bar {
+		display: block;
+		height: 0.75em;
+		min-width: 2px;
+		border-radius: var(--border-radius);
 	}
 </style>
