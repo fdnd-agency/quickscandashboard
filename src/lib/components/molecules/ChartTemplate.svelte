@@ -77,21 +77,18 @@
 <style>
 	/* chart styling */
 
-	ul.wrapper {
+	article.wrapper {
 		padding: var(--spacing-16px);
 		background: var(--component-background);
 		color: var(--text-color);
 		border: solid var(--component-outline) 2px;
 		border-radius: 1em;
-		list-style: none;
 
-		li {
-			h2 {
-				margin: 0;
-				padding-bottom: var(--spacing-8px);
-				font-size: var(--text-size-s);
-				font-weight: 500;
-			}
+		h2 {
+			margin: 0;
+			padding-bottom: var(--spacing-8px);
+			font-size: var(--text-size-s);
+			font-weight: 500;
 		}
 	}
 </style>
