@@ -83,7 +83,4 @@ a {
 	/* al bovenstaande code is om een checkbox visueel te verbergen maar wel zichtbaar te houden voor screenreaders */
 }
 
-h1 {
-	color: var(--text-color);
-	margin: 0;
-}
+

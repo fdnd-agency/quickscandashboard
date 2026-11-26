@@ -23,6 +23,11 @@
 			margin-left: 75px;
 		}
 	}
+        h1 {
+            font-size: var(--text-size-m);
+            margin-top: var(--spacing-8px);
+            color: var(--text-color);
+        }
 
 	main {
 		min-height: 100vh;
