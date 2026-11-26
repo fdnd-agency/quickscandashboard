@@ -67,7 +67,7 @@
 
 <ul class="wrapper">
 	<li class="head">
-		<p>{title}</p>
+		<h2>{title}</h2>
 	</li>
 	<li>
 		<canvas bind:this={canvas}></canvas>
@@ -86,9 +86,11 @@
 		list-style: none;
 
 		li {
-			p {
+			h2 {
 				margin: 0;
 				padding-bottom: var(--spacing-8px);
+				font-size: var(--text-size-s);
+				font-weight: 500;
 			}
 		}
 	}
