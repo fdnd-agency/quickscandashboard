@@ -171,11 +171,15 @@
 	}
 
 	h2 {
-		font-size: 13px;
+		font-size: var(--text-size-s);
 		font-weight: 500;
 		padding: 0 var(--spacing-8px);
 		margin: 0 0 var(--spacing-8px);
 		opacity: 0.6;
+	}
+
+	span {
+	    font-size: var(--text-size-s);
 	}
 
 	hr {
@@ -197,7 +201,7 @@
 	li a {
 		display: flex;
 		align-items: center;
-		gap: var(--spacing-4px);
+		gap: var(--spacing-8px);
 		font-weight: 400;
 		padding: var(--spacing-4px) var(--spacing-8px);
 	}

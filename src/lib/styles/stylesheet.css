@@ -21,6 +21,14 @@
 	--spacing-16px: 16px;
 	--spacing-23px: 23px;
 	--spacing-34px: 34px;
+
+	/* Modular Scale textgroottes */
+	--text-size-xs: 0.5em;
+	--text-size-s: 1em;
+	--text-size-m: 1.5em;
+	--text-size-l: 2em;
+	--text-size-xl: 2.5em;
+	--text-size-xxl: 5em;
 }
 
 @media (prefers-color-scheme: dark) {
