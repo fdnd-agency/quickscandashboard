@@ -28,8 +28,12 @@
 </main>
 
 <style>
-	:global(body:has(.collapsible-menu :checked)) {
-		/*border: 10px solid red;*/
+
+	:global(:has(.collapsible-menu :checked)) {
+	    header {
+			margin-left: 100px;	
+		}
+	    
 		main {
 			margin-left: 75px;
 		}
@@ -52,4 +56,5 @@
 		place-items: center;
 		margin-left: 275px;
 	}
+	
 </style>
