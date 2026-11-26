@@ -4,6 +4,7 @@
 	let { data } = $props();
 </script>
 <section>
+    
 <ChartTemplate
 	chartType="bar"
 	title="voertuigtypes"
@@ -38,6 +39,7 @@
 </section>
 
 <style>
+    
 section {
     display: flex;
     flex-wrap: wrap;
