@@ -35,6 +35,22 @@
 	chartData={data.activityLocationAmount}
 	dataLabel="Locaties activiteiten"
 />
+
+<ChartTemplate
+	chartType="pie"
+	title="Hinder"
+	chartLabels={data.hinderType}
+	chartData={data.hinderAmount}
+	dataLabel="soorten hinder"
+/>
+
+<ChartTemplate
+	chartType="pie"
+	title="Status plek"
+	chartLabels={data.statusType}
+	chartData={data.statusAmount}
+	dataLabel="Status plek"
+/>
 </section>
 
 <style>

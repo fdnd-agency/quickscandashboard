@@ -9,7 +9,7 @@ const countColumn = (rows, column) => {
 	for (const row of rows) {
 		const value = row[column];
 		counts[value] = (counts[value] ?? 0) + 1;
-	}
+	}	
 
 	return counts;
 };
@@ -39,6 +39,9 @@ export async function load({ fetch }) {
 	const transportCounts = countColumn(parsed.data, 'Transporttype');
 	const activityCounts = countColumn(parsed.data, 'Activiteit');
 	const activityLocationCounts = countColumn(parsed.data, 'Plek activiteit');
+	const hinderCounts = countColumn(parsed.data, 'Hinder');
+	const statusCounts = countColumn(parsed.data, 'Status plek');
+
 
 	// keys zijn de namen voor de labels, values de aantallen voor de staven/segmenten
 	return {
@@ -52,7 +55,14 @@ export async function load({ fetch }) {
 		activityAmount: Object.values(activityCounts),
 
 		activityLocationType: Object.keys(activityLocationCounts),
-		activityLocationAmount: Object.values(activityLocationCounts)
+		activityLocationAmount: Object.values(activityLocationCounts),
+
+		hinderType: Object.keys(hinderCounts),
+		hinderAmount: Object.values(hinderCounts),
+
+		statusType: Object.keys(statusCounts),
+		statusAmount: Object.values(statusCounts),
+
 	};
 }
 
